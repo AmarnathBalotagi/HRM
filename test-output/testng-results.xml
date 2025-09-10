@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="2" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-28T18:15:08 IST" name="Failed suite [Default suite]" finished-at="2025-08-28T18:15:31 IST" duration-ms="23297">
+  <suite started-at="2025-09-11T00:23:35 IST" name="Default suite" finished-at="2025-09-11T00:24:02 IST" duration-ms="27339">
     <groups>
     </groups>
-    <test started-at="2025-08-28T18:15:08 IST" name="Default test(failed)" finished-at="2025-08-28T18:15:31 IST" duration-ms="23297">
-      <class name="HRM_Framework.HRM_Framework.Login_Test">
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:HRM_Framework.HRM_Framework.Login_Test@24313fcc]" started-at="2025-08-28T18:15:08 IST" name="setUpTest" finished-at="2025-08-28T18:15:13 IST" duration-ms="4790" status="PASS">
+    <test started-at="2025-09-11T00:23:35 IST" name="Default test" finished-at="2025-09-11T00:24:02 IST" duration-ms="27339">
+      <class name="HRM_Framework.HRM_Framework.AppTest">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:HRM_Framework.HRM_Framework.AppTest@192c3f1e]" started-at="2025-09-11T00:23:35 IST" name="setUpTest" finished-at="2025-09-11T00:23:40 IST" duration-ms="5755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method signature="validLogin()[pri:1, instance:HRM_Framework.HRM_Framework.Login_Test@24313fcc]" started-at="2025-08-28T18:15:13 IST" name="validLogin" finished-at="2025-08-28T18:15:17 IST" duration-ms="4088" status="PASS">
+        <test-method signature="loginTest()[pri:1, instance:HRM_Framework.HRM_Framework.AppTest@192c3f1e]" started-at="2025-09-11T00:23:40 IST" name="loginTest" finished-at="2025-09-11T00:23:46 IST" duration-ms="5472" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:HRM_Framework.HRM_Framework.Login_Test@24313fcc]" started-at="2025-08-28T18:15:17 IST" name="setUpTest" finished-at="2025-08-28T18:15:26 IST" duration-ms="9138" status="PASS">
+        </test-method> <!-- loginTest -->
+        <test-method signature="addEmployeeTest()[pri:2, instance:HRM_Framework.HRM_Framework.AppTest@192c3f1e]" started-at="2025-09-11T00:23:46 IST" name="addEmployeeTest" finished-at="2025-09-11T00:23:52 IST" duration-ms="6489" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpTest -->
-        <test-method signature="invalidLogin()[pri:2, instance:HRM_Framework.HRM_Framework.Login_Test@24313fcc]" started-at="2025-08-28T18:15:26 IST" name="invalidLogin" finished-at="2025-08-28T18:15:31 IST" duration-ms="5233" status="FAIL">
+        </test-method> <!-- addEmployeeTest -->
+        <test-method signature="fetchEmp()[pri:3, instance:HRM_Framework.HRM_Framework.AppTest@192c3f1e]" started-at="2025-09-11T00:23:52 IST" name="fetchEmp" finished-at="2025-09-11T00:23:54 IST" duration-ms="1870" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index] but found [https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]]]>
+              <![CDATA[expected [Stone] but found [arjun]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index] but found [https://opensource-demo.orangehrmlive.com/web/index.php/auth/login]
+              <![CDATA[java.lang.AssertionError: expected [Stone] but found [arjun]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at HRM_Framework.HRM_Framework.Login_Test.invalidLogin(Login_Test.java:48)
+at HRM_Framework.HRM_Framework.AppTest.fetchEmp(AppTest.java:56)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -64,8 +64,128 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidLogin -->
-      </class> <!-- HRM_Framework.HRM_Framework.Login_Test -->
-    </test> <!-- Default test(failed) -->
-  </suite> <!-- Failed suite [Default suite] -->
+        </test-method> <!-- fetchEmp -->
+        <test-method signature="editEmp()[pri:4, instance:HRM_Framework.HRM_Framework.AppTest@192c3f1e]" started-at="2025-09-11T00:23:54 IST" name="editEmp" finished-at="2025-09-11T00:23:58 IST" duration-ms="3643" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <div data-v-67d2aedf="" data-v-13cf171c="" class="oxd-select-text oxd-select-text--active">...</div> is not clickable at point (665, 555). Other element would receive the click: <div data-v-d5bfe35b="" class="oxd-form-loader">...</div>
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [233a68e78e59e4fe3fbb5b1cb5d3664d, clickElement {id=f.8757FB51D03723E9B88857579FBAD02C.d.A198F05D9F20A343021DAB0BFD8CEB3F.e.410}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Amarnath\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53263}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53263/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (233a68e78e59e4fe3fbb5b1cb5d3664d)] -> xpath: //label[text()='Nationality']/following::div[contains(@class,'oxd-select-text')][1]]
+Session ID: 233a68e78e59e4fe3fbb5b1cb5d3664d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div data-v-67d2aedf="" data-v-13cf171c="" class="oxd-select-text oxd-select-text--active">...</div> is not clickable at point (665, 555). Other element would receive the click: <div data-v-d5bfe35b="" class="oxd-form-loader">...</div>
+  (Session info: chrome=139.0.7258.155)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [233a68e78e59e4fe3fbb5b1cb5d3664d, clickElement {id=f.8757FB51D03723E9B88857579FBAD02C.d.A198F05D9F20A343021DAB0BFD8CEB3F.e.410}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\Amarnath\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53263}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53263/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (233a68e78e59e4fe3fbb5b1cb5d3664d)] -> xpath: //label[text()='Nationality']/following::div[contains(@class,'oxd-select-text')][1]]
+Session ID: 233a68e78e59e4fe3fbb5b1cb5d3664d
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at Action.actions.dd(actions.java:51)
+at Pages.PIM.Edit_Emp(PIM.java:118)
+at HRM_Framework.HRM_Framework.AppTest.editEmp(AppTest.java:62)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editEmp -->
+        <test-method signature="delEmp()[pri:5, instance:HRM_Framework.HRM_Framework.AppTest@192c3f1e]" started-at="2025-09-11T00:23:58 IST" name="delEmp" finished-at="2025-09-11T00:24:02 IST" duration-ms="4061" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Successfully Deleted] but found [Success
+Successfully Deleted
+×]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Successfully Deleted] but found [Success
+Successfully Deleted
+×]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at HRM_Framework.HRM_Framework.AppTest.delEmp(AppTest.java:71)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- delEmp -->
+      </class> <!-- HRM_Framework.HRM_Framework.AppTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

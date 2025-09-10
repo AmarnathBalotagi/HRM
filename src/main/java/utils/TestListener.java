@@ -1,9 +1,5 @@
 package utils;
 
-
-
-	
-
 	import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
