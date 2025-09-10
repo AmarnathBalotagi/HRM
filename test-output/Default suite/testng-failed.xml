@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="HRM_Framework.HRM_Framework.Login_Test">
+      <class name="HRM_Framework.HRM_Framework.AppTest">
         <methods>
+          <include name="fetchEmp"/>
           <include name="setUpTest"/>
-          <include name="invalidLogin"/>
+          <include name="editEmp"/>
+          <include name="delEmp"/>
         </methods>
-      </class> <!-- HRM_Framework.HRM_Framework.Login_Test -->
+      </class> <!-- HRM_Framework.HRM_Framework.AppTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
