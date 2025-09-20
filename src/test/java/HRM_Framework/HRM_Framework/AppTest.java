@@ -2,7 +2,10 @@ package HRM_Framework.HRM_Framework;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
 
 import Action.actions;
 import Base.base;
@@ -21,10 +24,10 @@ public class AppTest
     static String FN = "Stone" ;
     static String MN = "" ;
     static String LN = "Bold" ;
-    
+    @Parameters("browser")
 	@BeforeClass
-    public void setUpTest() {
-        base.setup();
+    public void setUpTest(String browser) {
+        base.setup(browser);
         lp = new LoginPage(getDriver());
         dash = new Dashboard(getDriver());
         pim = new PIM(getDriver());
