@@ -1,9 +1,13 @@
 package HRM_Framework.HRM_Framework;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
 
 import Action.actions;
 import Base.base;
@@ -16,9 +20,10 @@ public class Login_Test extends base  {
 	    Dashboard dash;
 	    actions ac;
 	    PIM pim;
+	    @Parameters("browser")
 	@BeforeMethod
-    public void setUpTest() {
-        base.setup();
+    public void setUpTest(String browser) {
+        base.setup(browser);
         lp = new LoginPage(getDriver());
         dash = new Dashboard(getDriver());
         pim = new PIM(getDriver());
@@ -31,16 +36,16 @@ public class Login_Test extends base  {
 		Thread.sleep(3000);
 		
 		String ExpectedURL="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
-		Assert.assertEquals(driver.getCurrentUrl(),ExpectedURL );
+		Assert.assertEquals(getDriver().getCurrentUrl(),ExpectedURL );
 		
-		ac.takeScreenshot(driver, "pass");
+		
 	}
 	@Test(priority = 2)
 	public void invalidLogin() throws InterruptedException {
 		lp.login("Amar", "admin123");
 		Thread.sleep(3000);
-		String ExpectedURL="https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
-		Assert.assertEquals(driver.getCurrentUrl(),ExpectedURL );
+		String ExpectedURL="https://opensource-demo.orangehrmlive.com/web/index.php/auth/logi";
+		Assert.assertEquals(getDriver().getCurrentUrl(),ExpectedURL );
 		
 		
 	}
